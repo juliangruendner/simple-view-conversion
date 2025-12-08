@@ -1,0 +1,10 @@
+services:
+  export-converter:
+    build: .
+    entrypoint: bash -c "tail -f /dev/null"
+    volumes:
+      - "../torch/output:/torch/output"
+      - "./output:/output"
+      - "./input:/input"
+      - "./src:/src"
+
