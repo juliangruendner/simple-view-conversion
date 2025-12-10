@@ -1,7 +1,7 @@
 from pathling import PathlingContext
 
 pc = PathlingContext.create()
-data = pc.read.ndjson("/input")
+data = pc.read.ndjson("../input")
 
 
 result = data.view(
