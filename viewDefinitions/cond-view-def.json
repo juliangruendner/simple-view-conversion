@@ -1,0 +1,36 @@
+{
+    "name": "viewDefinition",
+    "resource": {
+        "name": "conds",
+        "resource": "Condition",
+        "resourceType": "ViewDefinition",
+        "select": [
+            {
+                "column": [
+                    {
+                        "name": "id",
+                        "path": "id"
+                    }
+                ]
+                
+            },
+            {
+                "forEach": "stage.summary.coding",
+                "select": [
+                    {
+                        "column": [
+                            {
+                                "name": "summarySystem",
+                                "path": "system"
+                            },
+                            {
+                                "name": "summaryCode",
+                                "path": "code"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}
