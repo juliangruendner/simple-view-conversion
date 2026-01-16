@@ -16,6 +16,31 @@
                 ]
             },
             {
+                "column": [
+                    {
+                        "name": "deceased_boolean",
+                        "path": "deceased.ofType(boolean)",
+                        "type": "boolean"
+                    }
+                ]
+            },
+            {
+                "column": [
+                    {
+                        "name": "deceasedDateTimeOne",
+                        "path": "deceased.ofType(dateTime)"
+                    }
+                ]
+            },
+            {
+                "column": [
+                    {
+                        "name": "deceasedDateTimeTwo",
+                        "path": "deceasedDateTime"
+                    }
+                ]
+            },
+            {
                 "forEach": "address",
                 "select": [
                     {

@@ -12,25 +12,6 @@
                         "path": "id"
                     }
                 ]
-                
-            },
-            {
-                "column": [
-                    {
-                        "name": "deceasedDateTimeOne",
-                        "path": "deceased.ofType(dateTime)"
-                    }
-                ]
-                
-            },
-            {
-                "column": [
-                    {
-                        "name": "deceasedDateTimeTwo",
-                        "path": "deceasedDateTime"
-                    }
-                ]
-                
             },
             {
                 "forEach": "stage.summary.coding",
