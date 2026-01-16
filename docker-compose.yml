@@ -6,4 +6,5 @@ services:
       - "./output:/output"
       - "./input:/input"
       - "./src:/src"
+      - "./viewDefinitions:/viewDefinitions"
 

@@ -17,16 +17,16 @@
             },
             {
                 "forEach": "address",
-            "select": [
-              {
-                "column": [
-                  {
-                    "name": "zip",
-                    "path": "postalCode"
-                  }
+                "select": [
+                    {
+                        "column": [
+                            {
+                                "name": "zip",
+                                "path": "postalCode"
+                            }
+                        ]
+                    }
                 ]
-              }
-            ]
             }
         ],
         "name": "patient_demographics",
