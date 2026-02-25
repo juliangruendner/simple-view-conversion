@@ -24,5 +24,6 @@ def run_view_def(view_def_name):
 
 pc = PathlingContext.create()
 data = pc.read.ndjson("../input")
-run_view_def("pat-view-def.json")
-run_view_def("cond-view-def.json")
+#run_view_def("pat-view-def.json")
+#run_view_def("cond-view-def.json")
+run_view_def("lab-view-def.json")
