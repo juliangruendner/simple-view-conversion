@@ -27,7 +27,7 @@
                         "forEachOrNull": "extension.where(url='http://hl7.org/fhir/StructureDefinition/iso21090-PQ-translation')"
                     }
                 ],
-                "forEachOrNull": "value.ofType(Quantity).extension"
+                "forEachOrNull": "value.ofType(Quantity)"
             }
         ]
     }
