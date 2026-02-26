@@ -22,8 +22,14 @@ def run_view_def(view_def_name):
     result.show(truncate=False)
 
 
-pc = PathlingContext.create()
+#pc = PathlingContext.create()
+pc = PathlingContext.create(enable_extensions=True, enabled_open_types=(
+    'boolean', 'code', 'date', 'dateTime', 'decimal', 'integer', 'string',
+    'Coding', 'CodeableConcept', 'Address', 'Identifier', 'Reference',
+    'Quantity', 'uri',  # added
+))
 data = pc.read.ndjson("../input")
 #run_view_def("pat-view-def.json")
 #run_view_def("cond-view-def.json")
-run_view_def("lab-view-def.json")
+#run_view_def("lab-view-def.json")
+run_view_def("med-view-def.json")
