@@ -2,6 +2,7 @@ from pathling import PathlingContext
 import json
 
 
+
 def get_view_def(file_path):
 
     with open(file_path, "r") as f:
@@ -21,15 +22,36 @@ def run_view_def(view_def_name):
 
     result.show(truncate=False)
 
+    #result.write.mode("overwrite").option("header", True).csv("patientstest")
+
+    print(result.toPandas().to_csv(index=False))
+
+    print(result.toPandas().dtypes)
+
+
+
 
 #pc = PathlingContext.create()
+#pc = PathlingContext.create(enable_extensions=True, enabled_open_types=(
+#    'boolean', 'code', 'date', 'dateTime', 'decimal', 'integer', 'string',
+#    'Coding', 'CodeableConcept', 'Address', 'Identifier', 'Reference',
+#    'Quantity', 'uri',  # added
+#))
+
+
 pc = PathlingContext.create(enable_extensions=True, enabled_open_types=(
-    'boolean', 'code', 'date', 'dateTime', 'decimal', 'integer', 'string',
-    'Coding', 'CodeableConcept', 'Address', 'Identifier', 'Reference',
-    'Quantity', 'uri',  # added
+    'oid', 'boolean', 'string', 'code', 'decimal', 'integer', 'integer64',
+    'unsignedInt', 'positiveInt', 'uri', 'canonical', 'url', 'markdown',
+    'xhtml', 'date', 'dateTime', 'instant', 'time', 'uuid', 'base64Binary',
+    'Coding', 'CodeableConcept', 'Identifier', 'Period', 'Ratio', 'Range',
+    'Quantity', 'Age', 'Count', 'Duration', 'Distance', 'SimpleQuantity',
+    'MoneyQuantity', 'Reference', 'TriggerDefinition', 'Timing', 'Attachment',
+    'Contributor', 'ContactDetail', 'SampledData', 'Expression', 'ContactPoint',
+    'Address', 'UsageContext', 'DataRequirement', 'Annotation', 'Dosage', 'Meta',
 ))
+
 data = pc.read.ndjson("../input")
-#run_view_def("pat-view-def.json")
+run_view_def("pat-view-broken.json")
 #run_view_def("cond-view-def.json")
 #run_view_def("lab-view-def.json")
-run_view_def("med-view-def.json")
+#run_view_def("med-view-def.json")
